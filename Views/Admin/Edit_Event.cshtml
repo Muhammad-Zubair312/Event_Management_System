@@ -1,0 +1,30 @@
+﻿@model List<Event_Management_System.Models.Add_Event>
+@{
+    ViewBag.Title = "Update Event";
+}
+<form id="updateForm" method="post" action="/Admin/Edit">
+    <div class="mb-3">
+        <label class="form-label fw-bold">Select Event</label>
+        <select id="eventSelect" name="eventSelect" class="form-select" required>
+            <option value="">-- Choose Event --</option>
+            @foreach (var item in Model)
+            {
+                <option value="@item.Id">@item.Eventname</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label fw-bold">New Venue</label>
+        <input type="text" name="Venue" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label fw-bold">New Date</label>
+        <input type="date" name="Date" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-warning w-100">Update Event</button>
+</form>
+
+

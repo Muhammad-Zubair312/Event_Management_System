@@ -1,0 +1,51 @@
+﻿@model Event_Management_System.Models.Add_Event
+@{
+    ViewBag.Title = "Add Event";
+}
+<h2 class="text-center mb-4 text-success fw-bold">🎟️ Add Your Event</h2>
+
+<div class="container w-75 mx-auto p-4 border rounded shadow bg-white">
+
+    <form action="/Admin/Add" method="post">
+
+        
+        <div class="mb-3">
+
+            <label for="fullName" class="form-label fw-bold">Your Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="Name" placeholder="e.g. Zubair Arif" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email Address</label>
+            <input type="email" class="form-control" id="email" name="Email" placeholder="e.g. you@example.com" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Event" class="form-label fw-bold">Event Name</label>
+            <input type="text" class="form-control" id="Event" name="EventName" placeholder="e.g. PUCON" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Date" class="form-label fw-bold">Enter Date</label>
+            <input type="text" class="form-control" id="Date" name="Date" placeholder="e.g. April 09, 2024" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Time" class="form-label fw-bold">Enter Time</label>
+            <input type="text" class="form-control" id="Time" name="Time" placeholder="e.g. 9:00 AM - 12:00 PM" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="venue" class="form-label fw-bold">Enter Event Venue</label>
+            <input type="text" class="form-control" id="venue" name="Venue" placeholder="e.g. Faisal Auditorium Punjab University" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Note" class="form-label fw-bold">Enter Notice For Audience</label>
+            <textarea class="form-control" id="Note" name="Note" placeholder="e.g. Specify Audience like Only UnderGrad PU student are allow" rows = "3" required></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-success w-100 fw-bold">✅ Add Event</button>
+    </form>
+</div>

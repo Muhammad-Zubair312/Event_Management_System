@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Book Event";
+}
+
+<h2 class="text-center mb-4 text-success fw-bold">🎟️ Book Your Tickets</h2>
+
+<div class="container w-75 mx-auto p-4 border rounded shadow bg-white">
+
+    <form action="/User/Ticket" method="post">
+
+        @if (ViewBag.EventName != null)
+        {
+
+            <input type = "hidden" name="Eventname" value= "@ViewBag.EventName" required/>
+        }
+
+        <div class="mb-3">
+            <label for="fullName" class="form-label fw-bold">Your Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="Name" placeholder="e.g. Zubair Arif" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email Address</label>
+            <input type="email" class="form-control" id="email" name="Email" placeholder="e.g. you@example.com" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="ticketCount" class="form-label fw-bold">Number of Tickets</label>
+            <input type="number" class="form-control" id="ticketCount" name="Number_of_Tickets" min="1" max="5" required />
+        </div>
+
+        <button type="submit" class="btn btn-success w-100 fw-bold">✅ Confirm Booking</button>
+    </form>
+</div>

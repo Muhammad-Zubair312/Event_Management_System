@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<h2 class="text-center mb-4">Admin Dashboard</h2>
+
+<div class="container w-50 mx-auto p-4 border rounded shadow bg-light text-center">
+    <h4>Welcome, @ViewBag.AdminName!</h4>
+    <p>Manage events efficiently.</p>
+
+    <div class="mt-4">
+        <a href="/Admin/Add" class="btn btn-success w-100 mb-2">Add Event</a>
+        <a href="/Admin/Edit" class="btn btn-warning w-100 mb-2">Edit Event</a>
+        <a href="/Admin/Delete" class="btn btn-danger w-100">Delete Event</a>
+    </div>
+</div>

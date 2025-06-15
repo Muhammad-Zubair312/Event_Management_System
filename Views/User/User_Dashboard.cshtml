@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "User Dashboard";
+}
+
+<h2 class="text-center mb-4">User Dashboard</h2>
+
+<div class="container w-50 mx-auto p-4 border rounded shadow bg-light text-center">
+    <h4>Welcome, @ViewBag.UserName!</h4>
+    <p>Explore and book your favorite events.</p>
+
+    <div class="mt-4">
+        <a href="/User/Discover" class="btn btn-success w-100 mb-2">Discover Events</a>
+        <a href="/User/EventTicket" class="btn btn-primary w-100">Book Tickets</a>
+    </div>
+</div>
